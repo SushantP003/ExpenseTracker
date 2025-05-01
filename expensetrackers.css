@@ -1,0 +1,212 @@
+:root {
+    --primary-color: #f5f5f5;
+    --secondary-color: #333;
+    --bg-color: #fff;
+    --card-color: #f9f9f9;
+    --icon-color: #e74c3c;
+  }
+  
+  .dark-theme {
+    --primary-color: #222;
+    --secondary-color: #f5f5f5;
+    --bg-color: #121212;
+    --card-color: #1e1e1e;
+    --icon-color: #e74c3c;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+  
+  header button {
+    padding: 8px 12px;
+    font-size: 18px;
+    background: var(--card-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .main-content {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .left-panel, .right-panel {
+    flex: 1;
+    background: var(--card-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .balance-section, .chart-section {
+    padding: 20px;
+  }
+  
+  .balance-section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .inc-exp-container {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .money-plus {
+    color: #2ecc71;
+  }
+  
+  .money-minus {
+    color: #e74c3c;
+  }
+  
+  .form-control {
+    margin-bottom: 15px;
+  }
+  
+  input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    background: var(--bg-color);
+    color: var(--secondary-color);
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .list {
+    list-style-type: none;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .list li {
+    background: var(--bg-color);
+    color: var(--secondary-color);
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid;
+  }
+  
+  .list li.plus {
+    border-color: #2ecc71;
+  }
+  
+  .list li.minus {
+    border-color: #e74c3c;
+  }
+  
+  .delete-btn {
+    background: var(--icon-color);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .filter-buttons {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .filter-btn {
+    padding: 5px 10px;
+    border: none;
+    background: var(--card-color);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .filter-btn.active {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .main-content {
+      flex-direction: column;
+    }
+  }
+  .chart-section canvas {
+    width: 250px !important;
+    height: 250px !important;
+  }
+    
+  .chart-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .toggle-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .toggle-btn {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .toggle-btn:hover {
+    opacity: 0.9;
+  }
+  
+  .toggle-btn.income {
+    background-color: #2ecc71;
+  }
+  .toggle-btn.expense {
+    background-color: #e74c3c;
+  }
+  
